@@ -27,10 +27,9 @@ matrix:
       dist: xenial
       python: "3.7"
       sudo: true
-      install:
-        - pip install qiskit
-        - pip install -r requirements-dev.txt
       script: tools/deploy_documentation.sh
+      git:
+        depth: false
     - if: tag IS present
       python: "3.6"
       env:
@@ -41,7 +40,7 @@ matrix:
         - twine upload dist/qiskit*tar.gz
 
 language: python
-install: pip install -U tox
+install: pip install -U tox pip virtualenv
 script:
   - tox
 
