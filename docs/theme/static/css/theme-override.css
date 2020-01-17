@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700,700i&display=swap');
 
-body {
+body,
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
     font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -24,6 +25,10 @@ body {
     background: #212121;
 }
 
+.wy-side-nav-search > a img.logo {
+    max-width: 50%;
+}
+
 .rst-content tt.xref,
 a .rst-content tt,
 .rst-content tt.xref,
@@ -45,7 +50,7 @@ a .rst-content code {
     }
 }
 
-.pre
+.docutils .reference.internal .xref .pre
 {
-color:#BE8184;
+  color:#BE8184 !important;
 }
